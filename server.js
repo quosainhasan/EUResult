@@ -10,12 +10,19 @@ app.use(express.static('public'));
 //     res.sendFile('./index.html', { root: dirname });
 // });
 
-app.get('/data', (req, res) => {
-    const data = JSON.parse(fs.readFileSync('data.json'));
-    // const data = require('./data.json');
-    res.json(data);
-});
+app.get('/api/data', (req, res) => {
+    fs.readFile('data.json', 'utf8', (err, data) => {
+      if (err) {
+        console.error(err);
+        res.status(500).send('Error reading data');
+      } else {
+        res.json(JSON.parse(data));
+      }
+    });
+  });
 
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
+
+module.exports = app;
