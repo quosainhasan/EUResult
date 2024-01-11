@@ -11,7 +11,6 @@ app.use(express.static('public'));
 
 app.get('/data', (req, res) => {
     const data = require('./data.json');
-    console.log('data', data);
     res.json(data);
 });
 
