@@ -5,9 +5,9 @@ const dirname = 'public';
 
 app.use(express.static('public'));
 
-app.get('/', (req, res) => {
-    res.sendFile('./index.html', { root: dirname });
-});
+// app.get('/', (req, res) => {
+//     res.sendFile('./index.html', { root: dirname });
+// });
 
 app.get('/data', (req, res) => {
     const data = require('./data.json');
