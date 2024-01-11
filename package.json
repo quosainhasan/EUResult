@@ -9,7 +9,7 @@
     "data": "node data.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Quosain Hasan",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
