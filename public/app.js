@@ -1,6 +1,6 @@
 window.onload = async () => {
     console.log('window.onload');
-    const response = await fetch('/data');
+    const response = await fetch('api/data');
     const data = await response.json();
     const dataDiv = document.getElementById('data');
     const searchInput = document.getElementById('search');
