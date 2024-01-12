@@ -20,8 +20,8 @@ cors({ credentials: true, origin: true ,
 });
 
 app.get('/data', (req, res) => {
-    const data = JSON.parse(fs.readFileSync('data.json'));
-    // const data = require('./data.json');
+    // const data = JSON.parse(fs.readFileSync('data.json'));
+    const data = require('./api/data.json');
     res.json(data);
 });
 
